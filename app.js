@@ -4,8 +4,16 @@
 // set event listeners 
 // get user input
     // use user input to update state 
-document.getElementById ('clickButton').addEventListener('click', () => {document.getElementById('myInfo').value = 'Aaron';});
-document.getElementById ('clickButton').addEventListener('click', () => {document.getElementById('pronouns').value = 'he/him';});
-document.getElementById ('clickButton').addEventListener('click', () => {document.getElementById('city').value = 'Austin, Texas';});
-  
-    // update DOM to reflect the new state
+const sectionButton = document.getElementById ('clickButton');
+const nameSpan = document.getElementById('name');
+const animalDiv = document.getElementById('animalDiv');
+const animalButton = document.getElementById ('showImage');
+
+sectionButton.addEventListener('click', ()=> {
+    nameSpan.classList.toggle('hidden');
+});
+      // update DOM to reflect the new state
+    
+animalButton.addEventListener('click', () => {
+    animalDiv.classList.toggle('hidden');
+});  
